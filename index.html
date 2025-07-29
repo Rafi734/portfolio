@@ -205,18 +205,24 @@
         }
 
         .about-image {
-            width: 300px;
-            height: 300px;
+            width: clamp(200px, 25vw, 300px);
+            height: clamp(200px, 25vw, 300px);
             border-radius: 50%;
             background: var(--gradient);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            color: var(--dark);
-            margin: 0 auto;
             position: relative;
             overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
         }
 
         .about-image::before {
@@ -516,7 +522,7 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-image">
-                🚀
+                <img src="Asset/rafi.jpg" alt="Md. Abdur Rahim Rafi">
             </div>
             <div class="about-text">
                 <p>I'm a passionate Front End Developer dedicated to creating stunning and user-friendly web interfaces. I specialize in transforming creative designs into interactive, responsive websites that provide exceptional user experiences.</p>
